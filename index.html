@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="styles/normalize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/toggle-switch.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Web App Dashboard</title>
+</head>
+
+<body>
+
+    <div id="container">       <!--        M A I N    C O N T A I N E R       -->
+
+
+<header>
+
+<h1><span>Your</span>App&trade;</h1>
+
+ <div class="header-intentify">
+
+    <div class="notification-in_header">
+       <img src="icons/icon-bell.svg" alt="Alert Bell Icon" />
+       <p class="notification"></p>
+    </div>
+
+       <div class="header-divider"><p class="divider"></p></div>
+
+    <div class="header-profile">    <!--         P R O F I L E     P I C T U R E         -->
+     <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Member photo" />
+     <p>Josh Sullivan</p>
+   </div>
+
+ </div>    <!-- outside header div  -->
+
+
+</header>
+
+ <div id="entire-dashboard" class="dash-board"> <!--   icons  on side bar, linking to parts of the page  -->
+ <nav>
+    <a href="#dashboard"><img src="icons/icon-dashboard.svg" alt="" width="22px" /></a>
+    <a href="#membership"><img src="icons/icon-members.svg" alt="" width="22px" /></a>
+    <a href="#daily-traffic"><img src="icons/icon-visits.svg" alt="" width="22px" /></a>
+    <a href="#settings"><img src="icons/icon-settings.svg" alt="" width="22px" /></a>
+ </nav>
+
+
+
+ <!--  main  html tags  -->
+<main>
+
+       <!-- search box in header -->
+ <div class="dashboard-search_box">
+    <h1>Dashboard</h1>
+    <div class="search-bar"><input type="search" placeholder="looking for someone . . . . ?">
+    </div>
+ </div>
+
+
+
+
+ <div id="alert" class="alert-box">      <!--      alert bar / clickable X      -->
+   <h2><span>Alert:</span> Site maintenance scheduled for Sunday 1:00 AM - 3:00 AM<span class="alert-box_close"
+    onclick="this.parentElement.parentElement.style.display='none';">X</span></h2>
+</div>
+
+
+<div class="timeline-list">
+  <ul>
+      <li class="Hourly">Monthly</li>
+      <li class="Daily">Weekly</li>
+      <li class="Weekly">Daily</li>
+      <li class="Monthly">Hourly</li>
+  </ul>
+  <div>
+
+
+<!--   three graph layouts -->
+
+     <!--  graph layout chart - refer to JS folder  -->
+<div class="line-chart">
+  <h1>Traffic</h1>
+    <canvas id="traffic-chart"></canvas>
+      </div>
+
+
+     <!--    bar layout chart in  -  refer to JS folder    -->
+<div class="inline-charts_container"><div class="traffic-bar_chart">
+  <h1> Daily Traffic</h1><canvas id="bar-chart_traffic"></canvas>
+    </div>
+
+
+     <!--   circle graph  -  refer to JS folder    -->
+ <div class="circle-chart">
+   <h1>Mobile Users</h1>
+     <canvas id="circle-chart"></canvas>
+    </div>
+  </div>
+
+
+
+
+
+
+     <!--         S O C I A L     M E D I A     S T A T S             -->
+
+ <div class="social-media_icons"><h1>Social Stats</h1><div class="social-media_lineup">
+
+    <div id="twitter" class="social-icons">  <!-- twitter  social  widget  -->
+      <img src="icons/icon-twitter.svg" alt="Twitter"/>
+        <h4>Twitter</h4>
+      <p>10,345</p>
+   </div>
+
+
+   <div id="facebook" class="social-icons"> <!-- facebook  social  widget  -->
+     <img src="icons/icon-facebook.svg" alt="Facebook" />
+       <h4>Facebook</h4>
+      <p>8,739</p>
+    </div>
+
+
+   <div id="google" class="social-icons">   <!-- google  social  widget  -->
+     <img src="icons/icon-google-plus.svg" alt="Google Plus" />
+       <h4>Google+</h4>
+      <p>2,530</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+     <!--       M E M B E R S H I P     C O N T A I N E R       -->
+
+  <div id="membership" class="members-container">
+
+
+  <div class="members-block">
+    <h1>New Members</h1>
+
+        <div class="member-wrapper">     <!--    M E M B E R   N U M B E R - 1    -->
+          <div class="member-wrapper_profile">
+         <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Member photo">
+        <div class="member-information">
+      <p>Victoria Chambers</p>
+    <p class="member-profile_email">victoria.chambers80@example.com</p>
+  </div>
+</div>
+          <p class="sign-up_date">10/15/15</p>
+</div>
+
+
+   <div class="member-wrapper">    <!--  M E M B E R   N U M B E R  - 2  -->
+     <div class="member-wrapper_profile">
+       <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Member photo">
+         <div class="member-information">
+        <p>Dale Byrd</p>
+      <p class="member-profile_email">dale.byrd52@example.com</p>
+    </div>
+  </div>
+          <p class="sign-up_date">10/15/15</p>
+</div>
+
+
+  <div class="member-wrapper">    <!--  M E M B E R   N U M B E R  - 3  -->
+    <div class="member-wrapper_profile">
+      <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Member photo">
+        <div class="member-information">
+          <p>Dawn Wood</p>
+        <p class="member-profile_email">dawn.wood16@example.com</p>
+      </div>
+    </div>
+           <p class="sign-up_date">10/15/15</p>
+  </div>
+
+
+  <div class="member-wrapper">      <!--  M E M B E R   N U M B E R  - 4 -->
+    <div class="member-wrapper_profile">
+      <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Member photo">
+        <div class="member-information">
+          <p>Dan Oliver</p>
+        <p class="member-profile_email">dan.oliver82@example.com</p>
+      </div>
+    </div>
+           <p class="sign-up_date">10/15/15</p>
+  </div>
+  </div>
+
+
+
+              <!--   member profile  -->
+
+  <div class="activity-widget">
+    <h1>Recent Activity</h1>
+
+      <div class="member-wrapper">
+        <div class="member-wrapper_profile">
+          <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Member photo">
+        <div class="member-information">
+      <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+    <p class="members-recent_activity">4 hours ago</p>
+  </div>
+  </div>
+        <p class="arrow">&#8250;</p>
+</div>
+
+
+  <div class="member-wrapper">
+    <div class="member-wrapper_profile">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Member photo">
+        <div class="member-information">
+          <p>Dale Byrd like the post Facebook's Changes for 2016</p>
+        <p class="members-recent_activity">5 hours ago</p>
+      </div>
+    </div>
+            <p class="arrow">&#8250;</p>
+</div>
+
+
+   <div class="member-wrapper">
+    <div class="member-wrapper_profile">
+      <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Member photo">
+        <div class="member-information">
+          <p>Dawn Wood commented on Facebook's Changes for 2016</p>
+        <p class="members-recent_activity">5 hours ago</p>
+      </div>
+    </div>
+            <p class="arrow">&#8250;</p>
+</div>
+
+
+  <div class="member-wrapper">
+    <div class="member-wrapper_profile">
+      <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Member photo">
+        <div class="member-information">
+      <p>Dan Oliver posted YourApp's SEO Tip's</p>
+     <p class="members-recent_activity">1 day ago</p>
+    </div>
+   </div>
+          <p class="arrow">&#8250;</p>
+  </div>
+</div>
+</div>  <!-- end of the menber profile -->
+
+<!-- made copy number  B here -------->
+
+
+<!--  buttons  -->
+
+<div class="settings-container">
+ <div class="messages-container">
+
+    <h1>Message User</h1>
+
+    <form class="user-message" action="index.html" method="post">
+
+    <input id="select_username" type="text" placeholder="Username">
+
+    <textarea id="message_user" placeholder="Message for User"></textarea>
+
+
+    <div id="alert_user" class="alert-message">
+
+        <h2>Please select a user or add a message!<span class="close-alert"
+
+          onclick="this.parentElement.parentElement.style.display='none';"></span></h2>
+    </div>
+
+
+     <div id="message-alert" class="alert-message">
+
+        <h2><span class="close-alert"
+
+          onclick="this.parentElement.parentElement.style.display='none';"></span></h2>
+     </div>
+
+
+      <div id="alert-send_message" class="alert-message">
+         <h2>Message sent!<span class="close-alert"
+           onclick="this.parentElement.parentElement.style.display='none';"></span></h2>
+      </div>
+
+    <button id="send_message" type="submit">SEND</button>
+  </form>
+</div>
+
+
+<div class="settings-widget">
+ <h1>Settings</h1>
+  <div class="user-settings">
+   <div class="email-settings">
+    <label class="switch-light switch-ios" onclick>
+
+     <input type="checkbox"><strong>Send Email Notifications</strong>
+
+     <span>
+       <span>Off</span>
+         <span>On</span>
+           <a></a>
+            </span>
+
+      </label>
+     </div>
+
+    <div class="public-profile">
+  <label class="switch-light switch-ios" onclick>
+
+   <input type="checkbox"><strong>Set Profile to Public</strong>
+      <span>
+        <span>Off</span>
+          <span>On</span>
+            <a></a>
+              </span>
+                </label>
+                  </div>
+                    </div>
+
+
+
+     <div class="user-timezone">
+       <select name="timezone">
+        <option value="" disabled selected>Select Timezone</option>
+           <option value="-10.0">(GMT -10:00) Hawaii</option>
+           <option value="-9.0">(GMT -9:00) Alaska</option>
+           <option value="-8.0">(GMT -8:00) Pacific Time</option>
+           <option value="-7.0">(GMT -7:00) Mountain Time</option>
+           <option value="-6.0">(GMT -6:00) Central Time</option>
+           <option value="-5.0">(GMT -5:00) Eastern Time</option>
+
+    </select>
+  </div>
+
+        <div class="settings-button">
+
+       <button>SAVE</button>
+       <button>CANCEL</button>
+
+     </div>
+    </div>
+   </div>
+  </main>
+
+        </div>
+        <!-- dashboard -->
+
+    </div>
+    <!-- container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
