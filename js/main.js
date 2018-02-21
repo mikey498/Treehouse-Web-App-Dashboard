@@ -135,6 +135,8 @@ function messageSent() {
   }
 
   else if (!nameForUser.value) { alertUser.style.display = "block"; }
+    
+    else if (!messageForUser.value) { alertUser.style.display = "block"; }
 
 
 
